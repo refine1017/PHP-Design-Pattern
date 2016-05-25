@@ -1,7 +1,16 @@
 {
     "name": "refine1017/PHP-Design-Pattern",
     "description": "PHP Design Pattern",
-    "require": {
-        "php": ">=5.3.3",
+    "author" : "zhangxing",
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "PDP\\": "src/"
+        }
     }
 }
