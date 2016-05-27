@@ -1,16 +1,16 @@
 <?php
 namespace PDOTest\FactoryTest;
 
-use PDP\Factory\ElemeFactory;
+use PDP\Factory\AppleFactory;
 
 class FactoryTest extends \PHPUnit_Framework_TestCase {
 	public function testOrder() {
-		$factory = new ElemeFactory();
+		$factory = new AppleFactory();
 
-		$seller = $factory->order("KFC");
-		$this->assertEquals("KFC", $seller->name());
+		$hardware = $factory->create("iPhone");
+		$this->assertEquals("iPhone", $hardware->name());
 
-		$seller = $factory->order("Mcdonald");
-		$this->assertEquals("Mcdonald", $seller->name());
+		$hardware = $factory->create("iPad");
+		$this->assertEquals("iPad", $hardware->name());
 	}
 }
