@@ -7,4 +7,5 @@ before_script:
   - cd tests
 script: 
   - phpunit -v
-  - cover -test -report coveralls
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
