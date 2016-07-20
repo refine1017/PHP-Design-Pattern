@@ -7,5 +7,6 @@ before_script:
   - cd tests
 script: 
   - phpunit -v
+  - phpunit --coverage-clover=coverage.xml
 after_success:
   - bash <(curl -s https://codecov.io/bash)
