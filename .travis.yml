@@ -5,4 +5,6 @@ php:
 before_script:
   - composer install
   - cd tests
-script: phpunit -v
+script: 
+  - phpunit -v
+  - cover -test -report coveralls
